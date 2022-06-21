@@ -8,22 +8,22 @@ import Resume from '../pages/Resume';
 export default function Portfolio() {
     const [currentPage, setCurrentPage] = useState('About');
 
-    function renderPage() {
-        switch(currentPage) {
-            case 'About':
-                return <About />;
-            case 'Contact':
-                return <Contact />;
-            case 'Projects':
-                return <Projects />;
-            case 'Resume':
-                return <Resume />;
-            default:
-                break;
-        };
+    const renderPage = () => {
+        if (currentPage === 'About') {
+            return <About />;
+          }
+          if (currentPage === 'Contact') {
+            return <Contact />;
+          }
+          if (currentPage === 'Projects') {
+            return <Projects />;
+          }
+          if (currentPage === 'Resume') {
+            return <Resume />
+          }
     };
     
-    const handlePageChange = (page) => setCurrentPage(page);
+    const handlePageChange = page => setCurrentPage(page);
 
     return (
         <div>
