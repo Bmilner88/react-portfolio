@@ -23,6 +23,42 @@
   color: #272B36;
 }
 
+.nav-link {
+  color:#fff;
+}
+
 .listEl {
   text-decoration: none;
+  list-style: none;
+}
+
+footer {
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #272B36;
+  color: #fff;
+}
+
+.aboutHeader {
+  margin: 3%;
+}
+
+.resume {
+  margin-top: 3%;
+}
+
+.proficiencies {
+  margin-top: 3%;
+  list-style: none;
+}
+
+.aboutPage {
+  display: flex;
+  margin: 3%;
+}
+
+#aboutP {
+  margin: 2%;
+  justify-content: space-evenly;
 }

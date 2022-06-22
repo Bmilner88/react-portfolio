@@ -37,27 +37,28 @@ export default function Contact(){
         <section className='page'>
             <h2 data-testid='h1tag'>Contact Me</h2>
             <form id='contact-form' onSubmit={handleSubmit}>
-                <div id='contactContainer'>
-                    <div className='input'>
-                        <label htmlFor='name'>Name:</label>
-                        <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
-                    </div>
-                    <div className='input'>
-                        <label htmlFor='email'>Email:</label>
-                        <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
-                    </div>
-                    <div className='input'>
-                        <label htmlFor='name'>Name:</label>
-                        <textarea name='message' rows='3' defaultValue={message} onBlur={handleChange} />
-                    </div>
-
-                    {errorMessage && (
-                        <div id='error'>
-                            <p className='error-text'>{errorMessage}</p>
+                <div className='card m-3'>
+                    <div className='card-body'>
+                        <div className='input'>
+                            <label htmlFor='name'>Name:</label>
+                            <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
                         </div>
-                    )}
+                        <div className='input'>
+                            <label htmlFor='email'>Email:</label>
+                            <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
+                        </div>
+                        <div className='input'>
+                            <label htmlFor='name'>Name:</label>
+                            <textarea name='message' rows='3' defaultValue={message} onBlur={handleChange} />
+                        </div>
+                        {errorMessage && (
+                            <div id='error'>
+                                <p className='error-text'>{errorMessage}</p>
+                            </div>
+                        )}
 
-                    <button id='submit' data-testid='button' type='submit'>Submit</button>
+                        <button id='submit' data-testid='button' type='submit'>Submit</button>
+                    </div>
                 </div>
 
                 <ul id='contactList'>
