@@ -38,15 +38,15 @@ export default function Contact(){
             <h2 data-testid='h1tag'>Contact Me</h2>
             <form id='contact-form' onSubmit={handleSubmit}>
                 <div id='contactContainer'>
-                    <div class='input'>
+                    <div className='input'>
                         <label htmlFor='name'>Name:</label>
                         <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
                     </div>
-                    <div class='input'>
+                    <div className='input'>
                         <label htmlFor='email'>Email:</label>
                         <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
                     </div>
-                    <div class='input'>
+                    <div className='input'>
                         <label htmlFor='name'>Name:</label>
                         <textarea name='message' rows='3' defaultValue={message} onBlur={handleChange} />
                     </div>
@@ -61,8 +61,8 @@ export default function Contact(){
                 </div>
 
                 <ul id='contactList'>
-                    <li class='listEl'><a href='https://www.linkedin.com/in/ben-milner-b20171142/'>LinkedIn Profile</a></li>
-                    <li class='listEl'><a href='https://github.com/Bmilner88'>GitHub Profile</a></li>
+                    <li className='listEl'><a href='https://www.linkedin.com/in/ben-milner-b20171142/'>LinkedIn Profile</a></li>
+                    <li className='listEl'><a href='https://github.com/Bmilner88'>GitHub Profile</a></li>
                 </ul>
 
             </form>

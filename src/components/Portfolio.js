@@ -25,9 +25,9 @@ export default function Portfolio() {
 
   const handlePageChange = (page) => setCurrentPage(page);
     return (
-        <div>
-            <header>
-                <h1 id='name'>Ben Milner</h1>
+        <div className='App'>
+            <header className='App-header'>
+                <h1 id='name'>Ben Milner - Professional Portfolio</h1>
                 <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
             </header>
             {renderPage()}
