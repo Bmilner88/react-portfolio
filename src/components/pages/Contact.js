@@ -39,6 +39,12 @@ export default function Contact(){
             <form id='contact-form' onSubmit={handleSubmit}>
                 <div className='card m-3'>
                     <div className='card-body'>
+                        test
+                    </div>
+                </div>
+
+                
+            {/* <div className='card-body'>
                         <div className='input'>
                             <label htmlFor='name'>Name:</label>
                             <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
@@ -58,15 +64,8 @@ export default function Contact(){
                         )}
 
                         <button id='submit' data-testid='button' type='submit'>Submit</button>
-                    </div>
-                </div>
-
-                <ul id='contactList'>
-                    <li className='listEl'><a href='https://www.linkedin.com/in/ben-milner-b20171142/'>LinkedIn Profile</a></li>
-                    <li className='listEl'><a href='https://github.com/Bmilner88'>GitHub Profile</a></li>
-                </ul>
-
+                    </div> */}
             </form>
-        </section>
+        </section>      
     );
 };

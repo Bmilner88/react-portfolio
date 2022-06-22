@@ -33,9 +33,10 @@
 }
 
 footer {
-  position:fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
+  min-height: 121px;
   background-color: #272B36;
   color: #fff;
 }
