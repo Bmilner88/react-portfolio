@@ -3,7 +3,7 @@ import React from 'react';
 export default function Projects() {
     return(
         <div className='projects'>
-            <h2>Projects</h2>
+            <h2>Portfolio</h2>
             <div className='container'>
                 <div className='row'>
                     <div className='card m-5 col'>

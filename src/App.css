@@ -2,12 +2,10 @@
   --primary-color: #94ebc5;
   --secondary-color: #08472b;
   --tertiary-color: #525252;
-  background-color: #dce3e0;
 }
 
 .App {
   text-align: center;
-  background-color: #dce3e0;
 }
 
 .App-header {
@@ -44,6 +42,43 @@ nav {
   padding-left: 0;
 }
 
+
+#submit, .btn {
+  border: none;
+  color: var(--tertiary-color);
+  background-color: var(--primary-color);
+  transition-duration: 0.2s;
+}
+
+#submit:hover, .btn:hover {
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
+
+.card-header {
+  color: var(--secondary-color);
+  transition-duration: 0.2s;
+}
+
+.card-header:hover {
+  color: var(--primary-color);
+}
+
+.card-body a {
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: #08472b;
+  transition-duration: 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color)
+}
+
 footer {
   color:var(--primary-color);
   background-color: var(--tertiary-color);
@@ -53,11 +88,11 @@ footer {
   right: 0;
 }
 
-/* a {
+footer a{
   text-decoration: none;
-  color: var(--primary-color);;
+  color: #94ebc5;
 }
 
-a :hover {
-  color: var(--primary-color);
-} */
+footer a:hover {
+  color: #08472b;
+}

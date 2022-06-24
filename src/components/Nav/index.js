@@ -18,7 +18,7 @@ export default function Nav({ currentPage, handlePageChange }) {
                     onClick={() => handlePageChange('Projects')}
                     className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
                 >
-                    Projects
+                    Portfolio
                 </a>
             </div>
             <div className='nav-item'>

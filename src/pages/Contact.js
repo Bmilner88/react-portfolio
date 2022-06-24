@@ -36,23 +36,21 @@ export default function Contact(){
     return(
         <section className='page'>
             <h2 className='contact'>Contact Me</h2>
-            <div className='card m-3'>
                 <form id='contact-form' onSubmit={handleSubmit}>
-                    <div className='card-body'>
                         <div className='input'>
                             <label htmlFor='name'>Name: </label>
                             <br/>
-                            <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
+                            <input type='text' name='Name' defaultValue={name} onBlur={handleChange} />
                         </div>
                         <div className='input'>
                             <label htmlFor='email'>Email: </label>
                             <br/>
-                            <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
+                            <input type='email' name='Email' defaultValue={email} onBlur={handleChange} />
                         </div>
                         <div className='input'>
                             <label htmlFor='message'>Message:</label>
                             <br/>
-                            <textarea name='message' rows='3' defaultValue={message} onBlur={handleChange} />
+                            <textarea name='Message' rows='3' defaultValue={message} onBlur={handleChange} />
                         </div>
                         {errorMessage && (
                             <div id='error'>
@@ -60,10 +58,8 @@ export default function Contact(){
                             </div>
                         )}
 
-                        <button id='submit' data-testid='button' type='submit'>Submit</button>
-                    </div>
+                        <button id='submit' className='btn' data-testid='button' type='submit'>Submit</button>
                 </form>
-            </div>
         </section>      
     );
 };
