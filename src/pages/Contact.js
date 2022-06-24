@@ -6,7 +6,7 @@ export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
 
     const [errorMessage, setErrorMessage] = useState('');
-    //const { name, email, message } = formState;
+    const { name, email, message } = formState;
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -44,7 +44,7 @@ export default function Contact(){
                 </div>
 
                 
-            {/* <div className='card-body'>
+            <div className='card-body'>
                         <div className='input'>
                             <label htmlFor='name'>Name:</label>
                             <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
@@ -64,7 +64,7 @@ export default function Contact(){
                         )}
 
                         <button id='submit' data-testid='button' type='submit'>Submit</button>
-                    </div> */}
+                    </div>
             </form>
         </section>      
     );
