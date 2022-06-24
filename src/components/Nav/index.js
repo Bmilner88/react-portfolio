@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Nav({ currentPage, handlePageChange }) {
     return(
-        <ul className='nav nav-tabs'>
-            <li className='nav-item'>
+        <nav className='nav nav-tabs'>
+            <div className='nav-item'>
                 <a 
                     href='#about'
                     onClick={() => handlePageChange('About')}
@@ -11,8 +11,8 @@ export default function Nav({ currentPage, handlePageChange }) {
                 >
                     About
                 </a>
-            </li>
-            <li className='nav-item'>
+            </div>
+            <div className='nav-item'>
                 <a 
                     href='#projects'
                     onClick={() => handlePageChange('Projects')}
@@ -20,8 +20,8 @@ export default function Nav({ currentPage, handlePageChange }) {
                 >
                     Projects
                 </a>
-            </li>
-            <li className='nav-item'>
+            </div>
+            <div className='nav-item'>
                 <a 
                     href='#resume'
                     onClick={() => handlePageChange('Resume')}
@@ -29,8 +29,8 @@ export default function Nav({ currentPage, handlePageChange }) {
                 >
                     Resume
                 </a>
-            </li>
-            <li className='nav-item'>
+            </div>
+            <div className='nav-item'>
                 <a 
                     href='#contact'
                     onClick={() => handlePageChange('Contact')}
@@ -38,7 +38,7 @@ export default function Nav({ currentPage, handlePageChange }) {
                 >
                     Contact
                 </a>
-            </li>
-        </ul>
+            </div>
+        </nav>
     );
 };

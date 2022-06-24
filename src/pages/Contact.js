@@ -35,26 +35,23 @@ export default function Contact(){
 
     return(
         <section className='page'>
-            <h2 data-testid='h1tag'>Contact Me</h2>
-            <form id='contact-form' onSubmit={handleSubmit}>
-                <div className='card m-3'>
+            <h2 className='mt-3'>Contact Me</h2>
+            <div className='card m-3'>
+                <form id='contact-form' onSubmit={handleSubmit}>
                     <div className='card-body'>
-                        test
-                    </div>
-                </div>
-
-                
-            <div className='card-body'>
                         <div className='input'>
-                            <label htmlFor='name'>Name:</label>
+                            <label htmlFor='name'>Name: </label>
+                            <br/>
                             <input type='text' name='name' defaultValue={name} onBlur={handleChange} />
                         </div>
                         <div className='input'>
-                            <label htmlFor='email'>Email:</label>
+                            <label htmlFor='email'>Email: </label>
+                            <br/>
                             <input type='email' name='email' defaultValue={email} onBlur={handleChange} />
                         </div>
                         <div className='input'>
-                            <label htmlFor='name'>Name:</label>
+                            <label htmlFor='message'>Message:</label>
+                            <br/>
                             <textarea name='message' rows='3' defaultValue={message} onBlur={handleChange} />
                         </div>
                         {errorMessage && (
@@ -65,7 +62,8 @@ export default function Contact(){
 
                         <button id='submit' data-testid='button' type='submit'>Submit</button>
                     </div>
-            </form>
+                </form>
+            </div>
         </section>      
     );
 };

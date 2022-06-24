@@ -34,7 +34,7 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return(
-    <div className='flex-column justify-flex-start min-100-vh'>
+    <div className='App flex-column justify-flex-start min-100-vh'>
         <Header />
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 

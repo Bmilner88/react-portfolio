@@ -6,7 +6,7 @@ export default function Resume() {
         <div className='page'>
             <h2 className='resume'>Resume</h2>
             <div id='resumeContainer'>
-                <a id='resume' href={pdf} target='_blank' rel='noreferrer'>
+                <a href={pdf} target='_blank' rel='noreferrer'>
                     <h5>Download PDF</h5>
                 </a>
             </div>
