@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../utils/helpers';
 
 export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
 
     const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message } = formState;
+    //const { name, email, message } = formState;
 
     const handleSubmit = e => {
         e.preventDefault();

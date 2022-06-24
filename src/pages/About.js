@@ -8,7 +8,7 @@ export default function About() {
             </div>
             <div  className='aboutPage'>
                 <div id='imgContainer'>
-                    <img id='img' src={require(`../../images/ben-milner.png`)} alt='Ben Milner' />
+                    <img id='img' src={require('../images/ben-milner.png')} alt='Ben Milner' />
                 </div>
                 <div>
                     <p id='aboutP'>

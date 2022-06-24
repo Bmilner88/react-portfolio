@@ -1,5 +1,5 @@
 import React from 'react';
-import pdf from '../../pdf/resume.pdf';
+import pdf from '../pdf/resume.pdf';
 
 export default function Resume() {
     return(
