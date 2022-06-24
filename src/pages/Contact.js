@@ -35,7 +35,7 @@ export default function Contact(){
 
     return(
         <section className='page'>
-            <h2 className='mt-3'>Contact Me</h2>
+            <h2 className='contact'>Contact Me</h2>
             <div className='card m-3'>
                 <form id='contact-form' onSubmit={handleSubmit}>
                     <div className='card-body'>

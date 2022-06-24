@@ -6,9 +6,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
-import './App.css';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -34,7 +33,7 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return(
-    <div className='App flex-column justify-flex-start min-100-vh'>
+    <div className='App flex-column justify-flex-start'>
         <Header />
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 

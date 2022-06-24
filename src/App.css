@@ -1,18 +1,26 @@
+:root {
+  --primary-color: #94ebc5;
+  --secondary-color: #08472b;
+  --tertiary-color: #525252;
+  background-color: #dce3e0;
+}
+
 .App {
   text-align: center;
+  background-color: #dce3e0;
 }
 
 .App-header {
-  background-color: #282c34;
-  color: white;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  height: 50px;
 }
 
 nav {
-  top: 0;
   display: flex;
   justify-content: center;
   padding-right: 10px;
-  background-color: #272B36;
+  background-color: var(--tertiary-color);
 }
 
 .listEl {
@@ -20,7 +28,7 @@ nav {
   list-style: none;
 }
 
-.resume, .proficiencies, .aboutHeader, #aboutP {
+.proficiencies, .about, .projects, .resume, .contact, #aboutP {
   margin-top: 3%;
   list-style: none;
 }
@@ -31,3 +39,25 @@ nav {
   margin: 3%;
   justify-content: center;
 }
+
+.proficiencies {
+  padding-left: 0;
+}
+
+footer {
+  color:var(--primary-color);
+  background-color: var(--tertiary-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* a {
+  text-decoration: none;
+  color: var(--primary-color);;
+}
+
+a :hover {
+  color: var(--primary-color);
+} */
