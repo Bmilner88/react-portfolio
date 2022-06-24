@@ -2,17 +2,10 @@ import React from 'react';
 
 export default function Projects() {
     return(
-        <div className='page'>
+        <div className='projects'>
             <h2>Projects</h2>
             <div className='container'>
                 <div className='row'>
-                    {/* <div className='card m-5 col'>
-                        <div className='card-body'>
-                            <a href="https://quiet-tundra-30236.herokuapp.com/" target='_blank' rel='noreferrer' className='card-header'><h4>Budgetek</h4></a>
-                            <img id='budgetek' src={require(`../../images/budgetek.png`)} alt='Budgetek' className='card-img'/>
-                            <a className="btn btn-primary mt-3" href='https://github.com/dsamuelson/Budgetek'>View on GitHub</a> 
-                        </div>
-                    </div> */}
                     <div className='card m-5 col'>
                         <div className='card-body'>
                             <a href="https://quiet-tundra-30236.herokuapp.com/" target='_blank' rel='noreferrer'><h4 className='card-header'>Budgetek</h4></a>
