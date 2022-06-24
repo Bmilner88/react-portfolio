@@ -11,35 +11,39 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('About');
+  const [currentPage, setCurrentPage] = useState('About');
 
   const renderPage = () => {
       if (currentPage === 'About') {
         return <About />;
       }
-      if (currentPage === 'Contact') {
+      else if (currentPage === 'Contact') {
         return <Contact />;
       }
-      if (currentPage === 'Projects') {
+      else if (currentPage === 'Projects') {
         return <Projects />;
       }
-      if (currentPage === 'Resume') {
+      else if (currentPage === 'Resume') {
         return <Resume />
+      }
+      else {
+        return <About />;
       }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
-    <div>
+  return(
+    <div className='flex-column justify-flex-start min-100-vh'>
         <Header />
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
 
         <main>
             {renderPage()}
         </main>
-
         <Footer />
     </div>
+  );
 };
 
 export default App;

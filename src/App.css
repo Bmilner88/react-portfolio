@@ -32,19 +32,6 @@
   list-style: none;
 }
 
-footer {
-  position:absolute;
-  left:0;
-  bottom:0;
-  right:0;
-  background-color: #272B36;
-  color: #fff;
-}
-
-.projects footer {
-  position: absolute;
-}
-
 .aboutHeader {
   margin: 3%;
 }
