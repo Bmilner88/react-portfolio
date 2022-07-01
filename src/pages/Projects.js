@@ -6,6 +6,13 @@ export default function Projects() {
             <h2>Portfolio</h2>
             <div className='container'>
                 <div className='row'>
+                <div className='card m-5 col'>
+                        <div className='card-body'>
+                            <a href="https://regal-help.herokuapp.com/" target='_blank' rel='noreferrer'><h4 className='card-header'>Regal</h4></a>
+                            <img id='regal' src={require(`../images/regal.png`)} alt='Regal' className='card-img'/>
+                            <a className="btn btn-primary mt-3" href='https://github.com/BlinkingHeimdall/Regal' target='_blank' rel='noreferrer'>View on GitHub</a> 
+                        </div>
+                    </div>
                     <div className='card m-5 col'>
                         <div className='card-body'>
                             <a href="https://quiet-tundra-30236.herokuapp.com/" target='_blank' rel='noreferrer'><h4 className='card-header'>Budgetek</h4></a>
@@ -43,13 +50,6 @@ export default function Projects() {
                             <a href="https://bmilner88.github.io/c4-code-quiz/" target='_blank' rel='noreferrer'><h4 className='card-header'>Code Quiz</h4></a>
                             <img id='code=quiz' src={require(`../images/code-quiz.png`)} alt='Code Quiz' className='card-img-top'/>
                             <a className="btn btn-primary mt-3" href='https://github.com/Bmilner88/c4-code-quiz' target='_blank' rel='noreferrer'>View on GitHub</a> 
-                        </div>
-                    </div>
-                    <div className='card m-5 col'>
-                        <div className='card-body'>
-                            <a href="https://bmilner88.github.io/c3-password-generator/" target='_blank' rel='noreferrer'><h4 className='card-header'>Password Generator</h4></a>
-                            <img id='password-generator' src={require(`../images/password-generator.png`)} alt='Password Generator' className='card-img'/>
-                            <a className="btn btn-primary mt-3" href='https://github.com/Bmilner88/c3-password-generator' target='_blank' rel='noreferrer'>View on GitHub</a> 
                         </div>
                     </div>
                 </div>
