@@ -9,6 +9,6 @@ This is my professional portfolio using React.
 - Built With:
     * JavaScript
     * Node.js
-    * React
+    * React.js
 
 ![screenshot](./public/screenshot.png)
