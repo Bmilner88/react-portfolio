@@ -79,6 +79,10 @@ nav {
   color: var(--secondary-color)
 }
 
+.bottom-cards {
+  margin-bottom: 30px;
+}
+
 footer {
   color:var(--primary-color);
   background-color: var(--tertiary-color);
