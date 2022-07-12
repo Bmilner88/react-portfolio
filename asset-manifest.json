@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/c20-react-portfolio/static/css/main.9eea68a1.css",
-    "main.js": "/c20-react-portfolio/static/js/main.bd3e0bad.js",
+    "main.css": "/c20-react-portfolio/static/css/main.1d134814.css",
+    "main.js": "/c20-react-portfolio/static/js/main.bd8bd02e.js",
     "static/js/787.b4df97d8.chunk.js": "/c20-react-portfolio/static/js/787.b4df97d8.chunk.js",
     "static/media/showpro.png": "/c20-react-portfolio/static/media/showpro.aa4c4869f35a304dfb98.png",
     "static/media/regal.png": "/c20-react-portfolio/static/media/regal.d03ba302cdd9dd70add0.png",
     "static/media/weather-dashboard.png": "/c20-react-portfolio/static/media/weather-dashboard.848cf034b1d50f30dcfd.png",
     "static/media/ben-milner.png": "/c20-react-portfolio/static/media/ben-milner.ba4e045dfdc215c6ded8.png",
-    "static/media/resume.pdf": "/c20-react-portfolio/static/media/resume.4cbb267f5be5ed616580.pdf",
+    "static/media/resume.pdf": "/c20-react-portfolio/static/media/resume.18970de06d72c43630db.pdf",
     "static/media/budgetek.png": "/c20-react-portfolio/static/media/budgetek.65bc4ea56b2d3cd9e85a.png",
     "static/media/code-quiz.png": "/c20-react-portfolio/static/media/code-quiz.e929c6c1a5b34c79e463.png",
     "static/media/sfcc-xml.png": "/c20-react-portfolio/static/media/sfcc-xml.331459d1d2ae4d302662.png",
     "index.html": "/c20-react-portfolio/index.html",
-    "main.9eea68a1.css.map": "/c20-react-portfolio/static/css/main.9eea68a1.css.map",
-    "main.bd3e0bad.js.map": "/c20-react-portfolio/static/js/main.bd3e0bad.js.map",
+    "main.1d134814.css.map": "/c20-react-portfolio/static/css/main.1d134814.css.map",
+    "main.bd8bd02e.js.map": "/c20-react-portfolio/static/js/main.bd8bd02e.js.map",
     "787.b4df97d8.chunk.js.map": "/c20-react-portfolio/static/js/787.b4df97d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9eea68a1.css",
-    "static/js/main.bd3e0bad.js"
+    "static/css/main.1d134814.css",
+    "static/js/main.bd8bd02e.js"
   ]
 }
