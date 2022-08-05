@@ -12,6 +12,11 @@ export default function About() {
                 </div>
                 <div>
                     <p id='aboutP'>
+                        I am seeking employment in the field of Web Development. I am well qualified for this position,
+                        having recently completed a Full-Stack Web Development Boot Camp through the University of Utah in addition to my professional and personal experience.
+                        I am a fast learner, a reliable employee, and I work well with others both as part of a team and in assisting clients and fellow employees. 
+                        <br/>
+                        <br/>
                         My name is Ben Milner, I have about 4 years of professional experience in IT and have always been fascinated with technology.
                         I am actively working towards finishing a coding Bootcamp to ideally move into a position as a Jr. Full-Stack Developer.
                         <br/>
