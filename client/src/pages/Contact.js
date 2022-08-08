@@ -1,103 +1,85 @@
 import React, { useState } from 'react';
 
-import { validateEmail } from '../utils/helpers';
-
-/* const nodemailer = require('nodemailer');
-
-function sendMail(recEmail) {
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.REACT_APP_USER,
-            pass: process.env.REACT_APP_PASS
-        }
-    });
-
-    let mailOptions = {
-        from: recEmail,
-        to: process.env.REACT_APP_EMAIL,
-        subject: 'Test',
-        text: 'This is a test for nodemailer'
-    };
-
-    transporter.sendMail(mailOptions, (err, data) => {
-        if(err) {
-            console.log(err);
-        } else {
-            console.log('Email sent successfully', data);
-        };
-    });
-}; */
+//import { validateEmail } from '../utils/helpers';
 
 export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
 
-    const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message } = formState;
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3001/send', {
+        await fetch('http://localhost:3001/send', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify(formState)
         })
-        .then((res) => res.json())
-        .then(() => {
-            setFormState({
-                name: '',
-                email: '',
-                message: ''
-            });
+        .then(res => res.json())
+        .then(async res => {
+            const resData = await res;
+
+            if(resData.status === 'success') {
+                console.log('Message sent');
+                setFormState({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+            } else if (res.status === 'fail') {
+                console.log(`Message failed to send: ${res.message}`)
+            }
         });
     };
 
     const handleChange = e => {
-        if(e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
-            if(!isValid) {
-                setErrorMessage('Your email is invalid.');
-            } else {
-                setErrorMessage('');
-            };
-        } else {
-            if(!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
-            } else {
-                setErrorMessage('');
-            };
-        };
+        const { name, value } = e.target;
+
+        setFormState({
+            ...formState,
+            [name]: value
+        });
     };
 
     return(
         <section className='page'>
             <h2 className='contact'>Contact Me</h2>
                 <form id='contact-form' onSubmit={handleSubmit}>
-                        <div className='input'>
-                            <label htmlFor='name'>Name: </label>
-                            <br/>
-                            <input type='text' name='Name' defaultValue={name} onBlur={handleChange} />
+                    <input
+                        className="form-input"
+                        placeholder="Name"
+                        name="name"
+                        type="name"
+                        id="name"
+                        value={formState.name}
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="form-input"
+                        placeholder="Email"
+                        name="email"
+                        type="email"
+                        id="email"
+                        value={formState.email}
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="form-input"
+                        placeholder="Message"
+                        name="message"
+                        type="message"
+                        id="message"
+                        rows='3'
+                        value={formState.message}
+                        onChange={handleChange}
+                    />
+                    {/* {errorMessage && (
+                        <div id='error'>
+                            <p className='error-text'>{errorMessage}</p>
                         </div>
-                        <div className='input'>
-                            <label htmlFor='email'>Email: </label>
-                            <br/>
-                            <input type='email' name='Email' defaultValue={email} onBlur={handleChange} />
-                        </div>
-                        <div className='input'>
-                            <label htmlFor='message'>Message:</label>
-                            <br/>
-                            <textarea name='Message' rows='3' defaultValue={message} onBlur={handleChange} />
-                        </div>
-                        {errorMessage && (
-                            <div id='error'>
-                                <p className='error-text'>{errorMessage}</p>
-                            </div>
-                        )}
+                    )} */}
 
-                        <button id='submit' className='btn' data-testid='button' type='submit'>Submit</button>
+                    <button id='submit' className='btn' data-testid='button' type='submit'>Submit</button>
                 </form>
         </section>      
     );
