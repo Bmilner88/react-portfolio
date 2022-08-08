@@ -35,20 +35,23 @@ export default function Contact(){
     const [errorMessage, setErrorMessage] = useState('');
     const { name, email, message } = formState;
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if(!errorMessage) {
-            setFormState({ [e.target.name]: e.target.value });
-            console.log('Form', formState);
-        };
-
-        //sendMail(formState.email);
-
-        setFormState({
-            name: '',
-            email: '',
-            message: ''
+        const response = await fetch('http://localhost:3001/send', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(formState)
+        })
+        .then((res) => res.json())
+        .then(() => {
+            setFormState({
+                name: '',
+                email: '',
+                message: ''
+            });
         });
     };
 

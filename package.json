@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "react": "cd client && npm start",
-    "develop": "concurrently \"cd nodemailerAPI && npm start\" \"cd client && npm start\"",
-    "install": "cd nodemailerAPI && npm i && cd ../client && npm i"
+    "develop": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i"
   },
   "repository": {
     "type": "git",
