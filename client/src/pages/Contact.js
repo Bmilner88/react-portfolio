@@ -2,6 +2,33 @@ import React, { useState } from 'react';
 
 import { validateEmail } from '../utils/helpers';
 
+const nodemailer = require('nodemailer');
+
+function sendMail(recEmail) {
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.REACT_APP_USER,
+            pass: process.env.REACT_APP_PASS
+        }
+    });
+
+    let mailOptions = {
+        from: recEmail,
+        to: process.env.REACT_APP_EMAIL,
+        subject: 'Test',
+        text: 'This is a test for nodemailer'
+    };
+
+    transporter.sendMail(mailOptions, (err, data) => {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log('Email sent successfully', data);
+        };
+    });
+};
+
 export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
 
@@ -10,10 +37,19 @@ export default function Contact(){
 
     const handleSubmit = e => {
         e.preventDefault();
+
         if(!errorMessage) {
             setFormState({ [e.target.name]: e.target.value });
             console.log('Form', formState);
         };
+
+        sendMail(formState.email);
+
+        setFormState({
+            name: '',
+            email: '',
+            message: ''
+        });
     };
 
     const handleChange = e => {
