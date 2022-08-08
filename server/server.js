@@ -32,7 +32,8 @@ app.post('/send', function (req, res) {
         from: `${req.body.email}`,
         to: process.env.EMAIL,
         subject: `Message from: ${req.body.name}`,
-        text: `${req.body.message}`
+        text: `${req.body.message},
+               Email Address: ${req.body.email}`
     };
    
     transporter.sendMail(mailOptions, (err, data) => {

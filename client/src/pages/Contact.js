@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-//import { validateEmail } from '../utils/helpers';
-
 export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
+
+    let errorMessage;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,12 +21,14 @@ export default function Contact(){
 
             if(resData.status === 'success') {
                 console.log('Message sent');
+                errorMessage = 'Message sent!';
                 setFormState({
                     name: '',
                     email: '',
                     message: ''
                 });
             } else if (res.status === 'fail') {
+                errorMessage = res.message;
                 console.log(`Message failed to send: ${res.message}`)
             }
         });
@@ -73,11 +75,12 @@ export default function Contact(){
                         value={formState.message}
                         onChange={handleChange}
                     />
-                    {/* {errorMessage && (
+
+                    {errorMessage && (
                         <div id='error'>
                             <p className='error-text'>{errorMessage}</p>
                         </div>
-                    )} */}
+                    )}
 
                     <button id='submit' className='btn' data-testid='button' type='submit'>Submit</button>
                 </form>
