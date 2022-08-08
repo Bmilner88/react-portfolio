@@ -11,4 +11,4 @@ This is my professional portfolio using React.
     * Node.js
     * React.js
 
-![screenshot](./public/screenshot.png)
+![screenshot](./client/public/screenshot.png)
