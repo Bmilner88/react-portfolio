@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { validateEmail } from '../utils/helpers';
 
-const nodemailer = require('nodemailer');
+/* const nodemailer = require('nodemailer');
 
 function sendMail(recEmail) {
     let transporter = nodemailer.createTransport({
@@ -27,7 +27,7 @@ function sendMail(recEmail) {
             console.log('Email sent successfully', data);
         };
     });
-};
+}; */
 
 export default function Contact(){
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
@@ -43,7 +43,7 @@ export default function Contact(){
             console.log('Form', formState);
         };
 
-        sendMail(formState.email);
+        //sendMail(formState.email);
 
         setFormState({
             name: '',

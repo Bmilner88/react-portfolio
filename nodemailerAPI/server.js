@@ -30,13 +30,13 @@ transporter.verify((err, success) => {
         : console.log(`Server is ready to take messages: ${success}`)
 });
 
-transporter.sendMail(mailOptions, (err, data) => {
+/* transporter.sendMail(mailOptions, (err, data) => {
     if(err) {
         console.log(err);
     } else {
         console.log('Email sent successfully');
     };
-});
+}); */
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
