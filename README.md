@@ -4,7 +4,7 @@
 
 This is my professional portfolio using React.
 
-* [GitHub Pages Deployment](https://bmilner88.github.io/react-portfolio/)
+* Link is broken ATM, will update with working link!
 
 - Built With:
     * JavaScript
