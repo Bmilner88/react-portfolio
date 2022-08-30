@@ -1,10 +1,8 @@
-# React Portfolio
+# React Portfolio (Legacy)
 
 ## Description
 
-This is my professional portfolio using React.
-
-* Link is broken ATM, will update with working link!
+This is my old portfolio I buit for the Web Development bootcamp.
 
 - Built With:
     * JavaScript
